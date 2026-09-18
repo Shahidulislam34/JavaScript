@@ -5,13 +5,24 @@ Quotes শুধুমাত্র JavaScript বা HTML Attribute-এর জ�
 
 .change-css-style{
     color : orange;
-    font-size : 3rem;
+    font-size : 2rem;
     font-weight : bold;
     font-style : italic;
 }
 
 .mouse-over-out{
     color : tomato;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
+}
+
+.button-animation{
+    background-color: tomato;
+    box-shadow: 0 0 5px 5px tomato;
+    border-color: tomato;
+    opacity: 0.8;
+}
+
+.signup{
+    margin-bottom: 1rem;
 }

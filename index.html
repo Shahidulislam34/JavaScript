@@ -55,18 +55,101 @@
     <h1 id = "mouse-over-out">Check Mourse Over Out</h1>
 
     <br>
-    <button id = "button1">Button 1</button>
-    <button id = "button1">Button 2</button>
-    <button id = "button1">Button 3</button>
-    
+    <h2 id = "button-title">Click Buttons</h2>
+    <div id = "click-buttons">
+        <button>Button 1</button>
+        <button>Button 2</button>
+        <button>Button 3</button>
+    </div>
+
+    <br>
+    <h2 id = "audio-title">Play Audios</h2>
+    <div id = "audios">
+        <button>Audio 1</button>
+        <button>Audio 2</button>
+        <button>Audio 3</button> <br><br>
+        <button>Stop</button>
+    </div>
+
+    <p id = "key-press">Press any key from your keyboard</p>
+    <textarea id = "text-area" cols = "10" rows = "5"></textarea>
+    <p id = "num-of-char"> </p>
+
+    <label for="name">
+        Name:
+        <input id = "name-input" class = "name-input" type="text" value = "">
+    </label>
+
+
+    <div>
+        <h3>Programming Languages</h3>
+        <label for="c">
+            <input type="checkbox" name = "program" id = "c" value = "c">
+            C
+        </label> 
+        <br>
+        <label for="java">
+            <input type="checkbox" name="program" id="java" value = "java">
+            Java
+        </label>
+        <br>
+        <label for="python">
+            <input type="checkbox" name="program" id="python" value = "python">
+            Python
+        </label>
+        <br>
+        <label for="c-sharp">
+            <input type="checkbox" name="program" id="c-sharp" value = "c-sharp">
+            C#
+        </label>
+    </div>
+
+    <div>
+        <label for="department">Department:</label>
+        <select name="department" id="department">
+            <option value="cse">CSE</option>
+            <option value="ict">ICT</option>
+            <option value="eee">EEE</option>
+            <option value="me">ME</option>
+        </select>
+    </div>
+<!-- 
+<label>-এর for-এর মান এবং ইনপুটের id-এর মান হুবহু এক হতে হবে
+যদি <label>-এর for এবং ইনপুটের id-এর মান আলাদা (different) দেওয়া হয়, তবে লেবেল এবং ইনপুট ফিল্ডটির মধ্যকার কানেকশন বা যোগসূত্রটি ভেঙে যাবে।
+
+ফলাফলে প্রধানত ২টি সমস্যা হবে:
+১. লেবেলে ক্লিক করলে ইনপুট সিলেক্ট হবে না
+স্বাভাবিকভাবে লেবেলের টেক্সটে (যেমন: Department: লেখার ওপর) ক্লিক করলে ড্রপডাউনটি খুলে যায় বা ইনপুট বক্সে কার্সার চলে আসে।
+কিন্তু for এবং id আলাদা হলে লেবেলে ক্লিক করলে আর কোনো কাজ করবে না। ব্যবহারকারীকে বাধ্য হয়ে শুধু ওই ড্রপডাউন বা ছোট বক্সটির ওপরই নিখুঁতভাবে মাউস নিয়ে ক্লিক করতে হবে।
+২. স্ক্রিন রিডার ফর্মটি বুঝতে পারবে না
+দৃষ্টিপ্রতিবন্ধীদের জন্য ব্যবহৃত স্ক্রিন রিডার সফটওয়্যার টেক্সট এবং ইনপুট ফিল্ডের সম্পর্ক বুঝতে পারবে না। ফলে ইউজার যখন ইনপুট ফিল্ডে যাবেন, তখন সেটি কিসের ফিল্ড (Department নাকি Name)—তা স্ক্রিন রিডার পড়ে শোনাতে পারবে না। -->
+
+<br><br>
+<form id = "signup-form" action="">
+    <div>
+        <label for="name">Name: 
+            <input type="text" id = "name" name = "name" size="30" required autofocus>
+        </label>
+    </div>
+    <div>
+        <label for="email">Email: 
+            <input type="email" id = "email" name = "email" size="30" required>
+        </label>
+    </div>
+    <div>
+        <label for="password">Password: 
+            <input type="password" id = "password" name = "password" minlength="8" maxlength="16" required>
+        </label>
+    </div>
+    <div>
+        <input type="submit" value = "signup">
+    </div>
+</form>
 
 
 
 
-
-
-
-
+    <br><br><br><br><br>
     
     <!-- Script tag akdom body r sese thakbe -->
     <!-- //Internal Java Script
@@ -103,6 +186,11 @@
     <script src = "JS\dom-mini-project-next-image.js"></script>
     <script src = "JS\dom-change-css-style.js"></script>
     <script src = "JS\dom-event-listener-click.js"></script>
+    <script src = "JS\dom-event-listener-click-multiple-buttons.js"></script>
+    <script src = "JS\dom-event-listener-audio-player.js"></script>
+    <script src = "JS\dom-key-press-event-listener.js"></script>
+    <script src = "JS\dom-change-event-listener.js"></script>
+    <script src = "JS\dom-submit-event-listener.js"></script>
 
 
 </body>

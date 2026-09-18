@@ -24,7 +24,7 @@ console.log(arr);
 let arr2 = [2, 3, 4, 5, 6, 11];
 console.log(arr2);
 
-//splice method:arr2.splice(index_number, remove_element_number_from_index_number, add_any_number_of_elements_that_you_want_to_add);
+//splice method:arr2.splice(index_number, remove_number_of_element_from_index_number, add_any_number_of_elements_that_you_want_to_add);
 arr2.splice(2, 2, 8,8,8,8,8);
 console.log(arr2);
 
