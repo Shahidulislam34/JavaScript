@@ -1,0 +1,17 @@
+/* 
+CSS ফাইল লেখার সময় মানগুলোর চারপাশে Double Quote ("") দেওয়া যায় না।
+Quotes শুধুমাত্র JavaScript বা HTML Attribute-এর জন্য প্রযোজ্য।
+ */
+
+.change-css-style{
+    color : orange;
+    font-size : 3rem;
+    font-weight : bold;
+    font-style : italic;
+}
+
+.mouse-over-out{
+    color : tomato;
+    font-size: 2.5rem;
+    font-weight: bold;
+}

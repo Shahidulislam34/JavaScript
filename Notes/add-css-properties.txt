@@ -1,0 +1,36 @@
+
+CSS প্রপার্টি লেখার ক্ষেত্রে CSS ফাইল এবং JavaScript ফাইল-এর মধ্যে কিছু গুরুত্বপূর্ণ পার্থক্যের নিয়ম রয়েছে।
+১. CSS ফাইলে লেখার নিয়ম (style.css)
+Syntax: property-name: value;
+Naming Style: kebab-case (সব ছোট হাতের অক্ষর এবং শব্দের মাঝে হাইফেন -)।
+Quotes: কোনো স্ট্রিং বা ভ্যালুতে কোটেশন মার্কার ("" বা '') ব্যবহার করা যাবে না (শুধু font-family-তে একাধিক শব্দ থাকলে কোটেশন দেওয়া যায়)।
+Separator: একাধিক প্রপার্টি আলাদা করতে সেমিকোলন (;) দিতে হয়।
+Units: সংখ্যাগুলোর সাথে একক লিখে দিতে হয়।CSS-এ মাত্র কয়েকটি নির্দিষ্ট প্রপার্টি রয়েছে যেখানে সংখ্যাটি একটি অনুপাত (Ratio) বা গুণক (Multiplier) হিসেবে কাজ করে, তাই সেখানে Unit লাগে না:
+margin: 0;, padding: 0;opacity: 0.5;line-height: 1.5;z-index: 10;font-weight: 700; (বা bold)
+
+.card {
+    background-color: lightblue;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+২. JavaScript ফাইলে লেখার নিয়ম (script.js)
+JavaScript-এ CSS প্রপার্টি লেখার প্রধানত ২টি উপায় রয়েছে:
+
+পদ্ধতি A: element.style ব্যবহার করে (Inline CSS)
+Naming Style: camelCase (হাইফেন - তুলে দিয়ে পরের শব্দের প্রথম অক্ষর বড় হাতের বা Capital করতে হয়)।
+Quotes: প্রপার্টির মান বা Value অবশ্যই কোটেশন মার্কের ("" বা '') ভেতর রাখতে হয়।
+Units: সংখ্যাগুলোর সাথে একক (যেমন: px, rem, %) কোটেশনের ভেতরেই লিখে দিতে হয়।
+
+const myElement = document.querySelector(".card");
+myElement.style.backgroundColor = "lightblue";
+myElement.style.fontSize = "18px";
+myElement.style.marginTop = "20px";
+
+পদ্ধতি B: classList ব্যবহার করে (Best Practice)
+CSS ফাইলে আগে থেকেই ক্লাস বানিয়ে রেখে JavaScript দিয়ে শুধু সেই ক্লাসটি যোগ/বিয়োগ করা। এতে JS ফাইলে সরাসরি CSS প্রপার্টি লেখার দরকার পড়ে না।
+
+// CSS-এর .active ক্লাস যুক্ত বা রিমুভ করা
+myElement.classList.add("active");
+myElement.classList.remove("active");
